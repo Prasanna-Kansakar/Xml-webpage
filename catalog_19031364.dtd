@@ -1,0 +1,45 @@
+<!-- Defining all the Elements from the XML Documentation -->
+<!ELEMENT Mango_Music_Store (Store_Details, Inventory)>
+<!ELEMENT Store_Details (Logo,Store_Name, Address, Contact_No+, Web_Address)>
+<!ELEMENT Store_Name (#PCDATA)>
+<!ELEMENT Address (#PCDATA)>
+<!ELEMENT Contact_No (#PCDATA)>
+<!ELEMENT Logo EMPTY>
+<!ELEMENT Web_Address (#PCDATA)>
+<!ELEMENT Inventory (Songs,Instruments)>
+<!ELEMENT Songs (Genre+)>
+<!ELEMENT Genre (Genre_Name,Song+)>
+<!ELEMENT Genre_Name (#PCDATA)>
+<!ELEMENT Song (Song_Name,Price,Director?,Producer?,Writer?,Singers,Release_Date)>
+<!ELEMENT Song_Name (#PCDATA)>
+<!ELEMENT Price (#PCDATA)>
+<!ELEMENT Director (#PCDATA)>
+<!ELEMENT Producer (#PCDATA)>
+<!ELEMENT Writer (#PCDATA)>
+<!ELEMENT Singers (Singer+)>
+<!ELEMENT Singer (#PCDATA)>
+<!ELEMENT Release_Date (Year,Month?,Day?)>
+<!ELEMENT Year (#PCDATA)>
+<!ELEMENT Month (#PCDATA)>
+<!ELEMENT Day (#PCDATA)>
+<!ELEMENT Instruments (Instrument+)>
+<!ELEMENT Instrument (Instrument_Name,Picture, Ins_Price,Rent_Price?,Description?)>
+<!ELEMENT Instrument_Name (#PCDATA)>
+<!ELEMENT Ins_Price (#PCDATA)>
+<!ELEMENT Rent_Price (#PCDATA)>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT Picture EMPTY>
+
+<!-- Defining all the Attributes from the XML Documentation -->
+<!ATTLIST Genre Genre_ID ID #REQUIRED>
+<!ATTLIST Song Song_ID ID #REQUIRED>
+<!ATTLIST Song Avialable (yes|no) #REQUIRED>
+<!ATTLIST Singer 
+Self_directed (yes) #IMPLIED
+Self_written (yes) #IMPLIED
+Self_produced (yes) #IMPLIED>
+<!ATTLIST Instrument
+Instrument_ID ID #REQUIRED
+Ins_Avialable (yes|no) #REQUIRED
+Rentable (yes) #IMPLIED>
+

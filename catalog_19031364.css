@@ -1,0 +1,270 @@
+/* Style for all tags present in the document*/
+*{
+	margin:0;
+	padding:0;
+	display: block;
+}
+/* Style for Mango_Music_Store tag*/
+Mango_Music_Store{
+	font-family: arial;
+    background-color: rgb(180, 180, 237);
+    width: 100%;
+}
+/*Style for Store_Details tag*/
+Store_Details{
+	width: 100%;
+	background: rgb(108, 95, 210);
+	text-align:center;
+}
+/*Style for Logo tag*/
+Logo{
+	background: url('Images/logo.png'); 
+	background-size: cover;
+	height: 120px;
+	width: 130px;
+	display: block;
+	margin: auto;
+	float: left;
+	margin-left: 180px; 
+}
+/*Style for Store_Name tag*/
+Store_Name{
+	color: rgb(202, 216, 255);
+	font-size: 30px;
+	font-weight:bold;
+	width: 60%;
+	align-content: center;
+	margin-left: 330px; 
+}
+/*Style for Address and Contact_No tag*/
+Address, Contact_No{
+	color: rgb(202, 216, 255);
+	font-size: 20px;
+	width: 60%;
+	margin: auto;
+	font-family: "Times New Roman", Times, serif;
+}
+/*Style for Web tag*/
+Web_Address{
+	color: rgb(202, 216, 255);
+	font-size: 15px;
+	width: 60%;
+	padding-bottom: 10px; 
+	padding-left: 20px;
+	margin: auto;
+	font-family: "Times New Roman", Times, serif;
+}
+/*Style for Inventory tag*/
+Inventory{
+	width: 100%;
+}
+/*Style for Songs tag*/
+Songs{
+	width: 100%;
+	border-style: solid;
+	border-width:4px 0px 2px 0px;
+	border-color:white;
+}
+/*Style for Genre tag*/
+Genre{
+	width:95%;
+	border-style: solid;
+	border-width:2px;
+	border-color:rgb(108, 90, 203);
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	justify-content: space-around;
+  	align-items: center;
+  	background-color: white;
+}
+/*Style for Genre_Name tag*/
+Genre_Name{
+	flex: 0 0 100%;
+	width:100%;
+	text-align: center;
+	font-size: 50px;
+	font-weight:bold;
+	background-color: rgb(180, 144, 237);
+	color: white;
+}
+/*Style for content before Genre_Name tag*/
+Genre_Name:before{
+	content: "Genre: "
+}
+/*Style for Song tag*/
+Song{	
+	border-style: solid;
+	border-width:4px;
+	border-color:teal;
+	border-radius: 5px;
+	margin: 15px 0;
+	background-color: rgb(180, 144, 237);
+	padding: 10px;
+}
+/*Style for hover effect for Song tag*/
+Song:hover{
+	background-color: rgb(108, 90, 203);
+}
+/*Style for Song_Name tag*/
+Song_Name{
+	font-size: 25px;
+	color: rgb(108, 90, 203);
+	background-color: white;
+	padding: 0 	5px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+/*Style for Price, Director, Producer, Singers, Singer tags*/
+Price, Director, Producer, Writer, Singers, Singer {
+	font-size: 20px;
+	color: white;
+	padding-left: 5px;
+}
+/*Style for content before Price tag*/
+Price:before{
+	content: "Price: "
+}
+/*Style for content before Dierctor tag*/
+Director:before{
+	content: "Director: "
+}
+/*Style for content before Producer tag*/
+Producer:before{
+	content: "Producer: "
+}
+/*Style for content before Singers tag*/
+Singers:before{
+	content: "Singers: "
+}
+/*Style for content before Writer tag*/
+Writer:before{
+	content: "Writer: "
+}
+/*Style for content before Year tag*/
+Year:before{
+	content: "Release Date: "
+}
+/*Style for Release_Date tag*/
+Release_Date{
+	padding-left: 5px;
+}
+/*Style for Year, Month, Day tags*/
+Year, Month, Day{
+	display: inline;
+	font-size: 20px;
+	color: white;
+}
+/*Style for Singer tag*/
+Singer{
+	display: list-item;
+	list-style-position: inside;
+	margin-left: 5px;
+}
+/*Style for Instruments tag*/
+Instruments{
+	width: 100%;
+	border-style: solid;
+	border-width:2px 0px;
+	border-color:white;
+}
+/*Style for Instrument tag*/
+Instrument{
+	width: 95%;
+	border-style: solid;
+	border-width:2px;
+	border-color:rgb(108, 90, 203);
+	height: 400px;
+	margin: auto;
+}
+/*Style for Instrument_Name tag*/
+Instrument_Name{
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+	font-weight:bold;
+	background-color: rgb(180, 144, 237);
+	color: white;
+}
+/*Style for Picture tag*/
+Picture {
+	height: 280px;
+	width: 330px;
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	float: left;
+}
+/*Style for Picture tag of Instrument having the value of Instrument ID "I01"*/
+Instrument[Instrument_ID="I01"] Picture{
+	background: url('Images/Guitar.jpg');
+	background-size: cover;
+}
+/*Style for Picture tag of Instrument having the value of Instrument ID "I02"*/
+Instrument[Instrument_ID="I02"] Picture{
+	background: url('Images/saxophone.jpg');
+	background-size: cover;
+}
+/*Style for Picture tag of Instrument having the value of Instrument ID "I03"*/
+Instrument[Instrument_ID="I03"] Picture{
+	background: url('Images/violin.jpg');
+	background-size: cover;
+}
+/*Style for Picture tag of Instrument having the value of Instrument ID "I04"*/
+Instrument[Instrument_ID="I04"] Picture{
+	background: url('Images/Drum.jpg');
+	background-size: cover;
+}
+/*Style for Picture tag of Instrument having the value of Instrument ID "I05"*/
+Instrument[Instrument_ID="I05"] Picture{
+	background: url('Images/Flute.jpg');
+	background-size: cover;
+}
+/*Style for Ins_Price tag*/
+Ins_Price{
+	margin-top: 20px;
+}
+/*Style for Ins_Price, Rent_Price, Description tag*/
+Ins_Price,Rent_Price,Description{
+	display: block;
+	background-color: rgb(180, 144, 237);
+	float: left;
+	width: 70%;
+	padding: 10px; 
+	font-size: 40px;
+	color: white;
+	margin-left: 30px;
+}
+/*Style for content before Description tag*/
+Description:before{
+	content: "Description: "
+}
+/*Style for content before Price tag*/
+Ins_Price:before{
+	content: "Price: "
+}
+/*Style for content before rent_Price tag*/
+Rent_Price:before{
+	content: "Rental Price: "
+}
+/*Style for Instrument tag having the value of Instrument ID "I01"*/
+Instrument[Instrument_ID="I01"] Ins_Price{
+	margin-top: 80px;
+}
+/*Style for Instrument tag having the value of Instrument ID "I02"*/
+Instrument[Instrument_ID="I02"] Ins_Price{
+	margin-top: 25px;
+}
+/*Style for Instrument tag having the value of Instrument ID "I03"*/
+Instrument[Instrument_ID="I03"] Ins_Price{
+	margin-top: 15px;
+}
+/*Style for Instrument tag having the value of Instrument ID "I04"*/
+Instrument[Instrument_ID="I04"] Ins_Price{
+	margin-top: 80px;
+}
+/*Style for Instrument tag having the value of Instrument ID "I05"*/
+Instrument[Instrument_ID="I05"] Ins_Price{
+	margin-top: 25px;
+}

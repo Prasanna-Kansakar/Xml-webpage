@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Linking CSS file catalog_19031364.css -->
+<?xml-stylesheet type="text/css" href="catalog_19031364.css"?>
+<!-- Declaring the root tag Mango_Music_Store and linking XSD file catalog_19031364.xsd to the document -->
+<Mango_Music_Store xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+			xsi:noNamespaceSchemaLocation="catalog_19031364.xsd">
+	<!-- Declaring Parent Tag Store_Details -->
+	<Store_Details>
+		<!-- Declaring child elemnts of Store_Details and store details of the store -->
+		<Logo></Logo>
+		<Store_Name>Mango Music Store</Store_Name>
+		<Address>Jawalakhel,Lalitpur</Address>
+		<Contact_No>9641238753</Contact_No>
+		<Contact_No>4268774</Contact_No>
+		<Web_Address>www.TheMangoMusic.com</Web_Address>
+	</Store_Details>
+	<!-- Declaring Parent Tag Inventory -->
+	<Inventory>
+		<!-- Declaring Child Tag Songs -->
+		<Songs>
+			<!-- Declaring Child Tag Genre and adding attribute Genre_ID for the element Genre -->
+			<Genre Genre_ID="G01">
+				<!-- Declaring Child Tags Genre_Name and Song and storing The Genre's Name -->
+				<Genre_Name>Rock</Genre_Name>
+				<!-- Adding attributes Song_ID and Avialable for the element Song -->
+				<Song Song_ID="S01" Avialable="yes">
+					<!-- Declaring child elemnts of Song and store details of the Song -->
+					<Song_Name>Carry On Wayward Son</Song_Name>
+					<Price>550</Price>
+					<Producer>Jeff Glixman</Producer>
+					<Singers>
+						<!-- Adding optional attributes Self_written, Self_directed and Self_produced for the element Singer -->
+						<Singer Self_written="yes" Self_directed="yes">Kerry Livgren</Singer>
+					<Singer>Steve Walsh</Singer>
+					</Singers>
+					<Release_Date>
+						<!-- Adding child tags Year and optional child tags Month and Day -->
+						<Year>1976</Year>
+					</Release_Date>
+				</Song>
+				<Song Song_ID="S02" Avialable="no">
+					<Song_Name>Back In Black </Song_Name>
+					<Price>800</Price>
+					<Producer>Rocky Oldham</Producer>
+					<Singers>
+						<Singer Self_directed="yes" Self_written="yes">Angus Young</Singer>
+						<Singer Self_directed="yes" Self_written="yes">Brian Johnson</Singer>
+					</Singers>
+					<Release_Date>
+						<Year>1980</Year>
+						<Month>July</Month>
+						<Day>25</Day>
+					</Release_Date>
+				</Song>
+			</Genre>
+			<Genre Genre_ID="G02">
+				<Genre_Name>Folk</Genre_Name>
+				<Song Song_ID="S03" Avialable="yes">
+					<Song_Name>I See Fire</Song_Name>
+					<Price>850</Price>
+					<Singers>
+						<Singer Self_written="yes" Self_produced="yes" Self_directed="yes">Ed Sheeran</Singer>
+					</Singers>
+					<Release_Date>
+						<Year>2013</Year>
+						<Month>December</Month>
+						<Day>10</Day>
+					</Release_Date>
+				</Song>
+			</Genre>
+			<Genre Genre_ID="G03">
+				<Genre_Name>Hip Hop</Genre_Name>
+				<Song Song_ID="S04" Avialable="yes">
+					<Song_Name>Bodak Yellow</Song_Name>
+					<Price>1200</Price>
+					<Director>Bill Kahan Kapri</Director>
+					<Producer>Laquan Green</Producer>
+					<Writer>Anthony Jermaine White</Writer>
+					<Singers>
+						<Singer Self_written="yes" Self_directed="yes">Cardi B</Singer>
+					</Singers>
+					<Release_Date>
+						<Year>2018</Year>
+						<Month>June</Month>
+					</Release_Date>
+				</Song >
+				<Song Song_ID="S05" Avialable="yes">
+					<Song_Name>What’s Next</Song_Name>
+					<Price>860</Price>
+					<Producer>Supah Mario</Producer>
+					<Writer>Maneesh Bidaye</Writer>
+					<Singers>
+						<Singer Self_directed="yes" Self_written="yes">Drake</Singer>
+					</Singers>
+					<Release_Date>
+						<Year>2021</Year>
+						<Month>March</Month>
+					</Release_Date>
+				</Song>
+				<Song Song_ID="S06" Avialable="no">
+					<Song_Name>My Name Is</Song_Name>
+					<Price>1600</Price>
+					<Director>Labi Siffre</Director>
+					<Producer>Dr. Dre</Producer>
+					<Singers>
+						<Singer Self_directed="yes" Self_written="yes">Eminem</Singer>
+					</Singers>
+					<Release_Date>
+						<Year>1999</Year>
+					</Release_Date>
+				</Song>
+			</Genre>
+			<Genre Genre_ID="G04">
+				<Genre_Name>Pop Music</Genre_Name>
+				<Song Song_ID="S07" Avialable="yes">
+					<Song_Name>Tik Tok</Song_Name>
+					<Price>50</Price>
+					<Director>Benny Blanco</Director>
+					<Producer>Dr. Luke</Producer>
+					<Writer>Benny Blanco</Writer>
+					<Singers>
+						<Singer Self_directed="yes">Kesha Sebert</Singer>
+					</Singers>
+					<Release_Date>
+						<Year>2009</Year>
+					</Release_Date>
+				</Song>
+				<Song Song_ID="S08" Avialable="yes">
+					<Song_Name>Never Gonna Give You Up</Song_Name>
+					<Price>920</Price>
+					<Director>Simon West</Director>
+					<Producer>Andy Picheta</Producer>
+					<Singers>
+						<Singer Self_written="yes">Rick Astley</Singer>
+					</Singers>
+					<Release_Date>
+						<Year>1997</Year>
+						<Month>September</Month>
+					</Release_Date>
+				</Song>
+			</Genre>
+			<Genre Genre_ID="G05">
+				<Genre_Name>Funk</Genre_Name>
+				<Song Song_ID="S09" Avialable="yes">
+					<Song_Name>Uptown Funk</Song_Name>
+					<Price>450</Price>
+					<Director>Cameron Duddy</Director>
+					<Singers>
+						<Singer Self_written="yes" Self_produced="yes">Mark Ronson</Singer>
+						<Singer Self_written="yes" Self_produced="yes">Bruno Mars</Singer>
+					</Singers>
+					<Release_Date>
+						<Year>2014</Year>
+						<Month>November</Month>
+						<Day>10</Day>
+					</Release_Date>
+				</Song>
+				<Song Song_ID="S10" Avialable="no">
+					<Song_Name>Kung Fu Fighting</Song_Name>
+					<Price>1200</Price>
+					<Producer>Biddu Appaiah</Producer>
+					<Singers>
+						<Singer Self_written="yes" Self_directed="yes">Carl Douglas</Singer>
+					</Singers>
+					<Release_Date>
+						<Year>1974</Year>
+					</Release_Date>
+				</Song>
+			</Genre>		
+		</Songs>
+		<!-- Declaring Child Tag Instruments -->
+		<Instruments>
+			<!-- Declaring Child Tag Instruments and adding attributes Instrument_ID and Ins_Avialable and optional attribute Rentable for the element Instrument -->
+			<Instrument Instrument_ID="I01" Ins_Avialable="yes" Rentable="yes">
+				<!-- Declaring child elemnts of Instrument and store details of the Instrument -->
+				<Instrument_Name>Guitar</Instrument_Name>
+				<Picture></Picture>
+				<Ins_Price>5500</Ins_Price>
+				<Rent_Price>500</Rent_Price>
+			</Instrument>
+			<Instrument Instrument_ID="I02" Ins_Avialable="no">
+				<Instrument_Name>Saxophone</Instrument_Name>
+				<Picture></Picture>
+				<Ins_Price>2500</Ins_Price>
+				<Description>A saxophone is composed of a mouthpiece, conical metal tube, and finger keys. Sound is produced when air is blown through the instrument causing the reed to vibrate.</Description>
+			</Instrument>
+			<Instrument Instrument_ID="I03" Ins_Avialable="yes" Rentable="yes">
+				<Instrument_Name>Violin</Instrument_Name>
+				<Picture></Picture>
+				<Ins_Price>6000</Ins_Price>
+				<Rent_Price>900</Rent_Price>
+				<Description>The violin is a string instrument which has four strings and is played with a bow. The strings are usually tuned to the notes G, D, A, and E.</Description>
+			</Instrument>
+			<Instrument Instrument_ID="I04" Ins_Avialable="yes" Rentable="yes">
+				<Instrument_Name>Drum Set</Instrument_Name>
+				<Picture></Picture>
+				<Ins_Price>15000</Ins_Price>
+				<Rent_Price>250</Rent_Price>
+			</Instrument>
+			<Instrument Instrument_ID="I05" Ins_Avialable="yes">
+				<Instrument_Name>Flute</Instrument_Name>
+				<Picture></Picture>
+				<Ins_Price>2000</Ins_Price>
+				<Description>A flute is a musical instrument that produces sound when a stream of air is directed against the edge of a hole, causing the air within the body of the instrument to vibrate.</Description>
+			</Instrument>
+		</Instruments>
+	</Inventory>
+</Mango_Music_Store>

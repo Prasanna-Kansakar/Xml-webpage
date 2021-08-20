@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Creating schema for XML document using Flat Catalog Design -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!-- Schema for root element Mango_Music_Store -->
+	<xs:element name="Mango_Music_Store">
+		<xs:complexType>
+            <xs:sequence>
+				<xs:element ref="Store_Details"/>
+				<xs:element ref="Inventory"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Schema for element Store_Details -->
+	<xs:element name="Store_Details">
+		<xs:complexType>
+            <xs:sequence>
+            	<xs:element ref="Logo"/>
+            	<xs:element ref="Store_Name"/>
+				<xs:element ref="Address"/>
+				<xs:element ref="Contact_No" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Web_Address"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Schema for elements Store_Name, Address, Contact_No, Logo and Web_Address -->
+		<xs:element name="Logo">
+		<xs:simpleType>
+	  		<xs:restriction base="xs:string">
+	  			<xs:length value="0"/>
+	  		</xs:restriction>
+ 		</xs:simpleType>
+ 	</xs:element>
+	<xs:element name="Store_Name" type="xs:string"/>
+	<xs:element name="Address" type="xs:string"/>
+	<xs:element name="Contact_No" type="xs:decimal"/>
+	<xs:element name="Web_Address" type="xs:string"/>
+	<xs:element name="Inventory">
+		<xs:complexType>
+            <xs:sequence>
+            	<xs:element ref="Songs"/>
+				<xs:element ref="Instruments"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Schema for element Songs -->
+    <xs:element name="Songs">
+		<xs:complexType>
+            <xs:sequence>
+            	<xs:element ref="Genre" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Schema for element Genre -->
+    <xs:element name="Genre">
+		<xs:complexType>
+            <xs:sequence>
+            	<xs:element ref="Genre_Name"/>
+            	<xs:element ref="Song" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute ref="Genre_ID"  use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <!-- Schema for elements Genre_Name, and Song and attribute Genre_ID -->
+    <xs:element name="Genre_Name" type="xs:string"/>
+    <xs:attribute name="Genre_ID" type="xs:ID"/>
+    <xs:element name="Song">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Song_Name"/>
+				<xs:element ref="Price"/>
+				<xs:element ref="Director" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="Producer" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="Writer" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="Singers"/>
+				<xs:element ref="Release_Date"/>
+            </xs:sequence>
+            <xs:attribute ref="Song_ID"  use="required"/>
+            <xs:attribute ref="Avialable"  use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <!-- Schema for attributes Song_ID and Avialable -->
+    <xs:attribute name="Song_ID" type="xs:ID"/>
+    <xs:attribute name="Avialable">
+    	<xs:simpleType>
+        	<xs:restriction base="xs:string">
+        		<xs:enumeration value="yes"/>
+      			<xs:enumeration value="no"/>
+        	</xs:restriction>
+    	</xs:simpleType>
+	</xs:attribute>
+	<!-- Schema for elements Song_Name, Price, Director, Producer and Writer -->
+	<xs:element name="Song_Name" type="xs:string"/>
+	<xs:element name="Price" type="xs:decimal"/>
+	<xs:element name="Director" type="xs:string"/>
+	<xs:element name="Producer" type="xs:string"/>
+	<xs:element name="Writer" type="xs:string"/>
+	<!-- Schema for element Singers -->
+	<xs:element name="Singers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Singer" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Schema for element Singer -->
+	<xs:element name="Singer">
+		<xs:complexType>
+			<xs:simpleContent>
+      			<xs:extension base="xs:string">
+        			<xs:attribute ref="Self_directed"  use="optional"/>
+            		<xs:attribute ref="Self_produced"  use="optional"/>
+            		<xs:attribute ref="Self_written"  use="optional"/>
+      			</xs:extension>
+    		</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<!-- Schema for attributes Self_directed, Self_produced and Self_written -->
+	<xs:attribute name="Self_directed" type="xs:string" fixed="yes"/>
+	<xs:attribute name="Self_produced" type="xs:string" fixed="yes"/>
+	<xs:attribute name="Self_written" type="xs:string" fixed="yes"/>
+	<!-- Schema for element Release_Date -->
+	<xs:element name="Release_Date">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Year"/>
+				<xs:element ref="Month" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="Day" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Schema for elements Year, Month and Day -->
+	<xs:element name="Year" type="xs:decimal"/>
+	<xs:element name="Month" type="xs:string"/>
+	<xs:element name="Day" type="xs:decimal"/>
+	<!-- Schema for element Instruments -->
+	<xs:element name="Instruments">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Instrument" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Schema for element Instrument -->
+	<xs:element name="Instrument">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Instrument_Name"/>
+				<xs:element ref="Picture"/>
+				<xs:element ref="Ins_Price"/>
+				<xs:element ref="Rent_Price" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="Description" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+			<xs:attribute ref="Instrument_ID"  use="required"/>
+            <xs:attribute ref="Ins_Avialable"  use="required"/>
+            <xs:attribute ref="Rentable"  use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Schema for attributesInstrument_ID, Ins_Avialable and Rentable -->
+	<xs:attribute name="Instrument_ID" type="xs:ID"/>
+    <xs:attribute name="Ins_Avialable">
+    	<xs:simpleType>
+        	<xs:restriction base="xs:string">
+        		<xs:enumeration value="yes"/>
+      			<xs:enumeration value="no"/>
+        	</xs:restriction>
+    	</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="Rentable" type="xs:string" fixed="yes"/>
+	<!-- Schema for elements Instrument_Name, Ins_Price, Rent_Price, Description and Picture -->
+	<xs:element name="Instrument_Name" type="xs:string"/>
+	<xs:element name="Picture">
+		<xs:simpleType>
+	  		<xs:restriction base="xs:string">
+	  			<xs:length value="0"/>
+	  		</xs:restriction>
+ 		</xs:simpleType>
+ 	</xs:element>
+	<xs:element name="Ins_Price" type="xs:decimal"/>
+	<xs:element name="Rent_Price" type="xs:decimal"/>
+	<xs:element name="Description" type="xs:string"/>
+</xs:schema>
